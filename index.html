@@ -123,8 +123,7 @@
                 .attr('startOffset','50%')
                 .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
                 .text(d => d.data.name)
-                .style('fill', 'none')
-                .style('stroke', '#fff')
+                .style('fill', '#fff')
                 .style('stroke-linejoin', 'round');
 
             text.append('textPath')
