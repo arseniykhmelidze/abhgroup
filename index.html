@@ -5,6 +5,7 @@
         body {
             font-family: Sans-serif;
             font-size: 11px;
+            color: #fff;
         }
 
         .slice {
@@ -123,7 +124,6 @@
                 .attr('startOffset','50%')
                 .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
                 .text(d => d.data.name)
-                .style('color', '#fff')
                 .style('stroke-linejoin', 'round');
 
             text.append('textPath')
