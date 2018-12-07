@@ -103,7 +103,7 @@
                 });
 
             newSlice.append('title')
-                .text(d => d.data.name + '\n' + formatNumber(d.value));
+                .text(d => d.data.name);
 
             newSlice.append('path')
                 .attr('class', 'main-arc')
@@ -125,7 +125,6 @@
                 .text(d => d.data.name)
                 .style('fill', 'none')
                 .style('stroke', '#fff')
-                .style('stroke-width', 5)
                 .style('stroke-linejoin', 'round');
 
             text.append('textPath')
