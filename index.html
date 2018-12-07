@@ -31,9 +31,9 @@
     <script src='https://d3js.org/d3.v4.min.js'></script>
 </head>
 <body>
-    <script>
-        const width = window.innerWidth,
-  height = window.innerHeight,
+<script>
+  const width = 750,
+  height = 750,
   maxRadius = Math.min(width, height) / 2 - 5;
 
 const formatNumber = d3.format(',d');
@@ -95,8 +95,8 @@ const textFits = d => {
 const svg = d3
   .select('body')
   .append('svg')
-  .style('width', '100vw')
-  .style('height', '100vh')
+  .style('width', '750px')
+  .style('height', '750px')
   .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
   .on('click', () => focusOn()); // Reset zoom on canvas click
 
@@ -148,6 +148,8 @@ d3.json('sunburst.json',(error, root) => {
       .text(d => d.data.name);
   }
 );
+		
+		
 
 function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
   // Reset to top-level if no data point specified
