@@ -274,7 +274,7 @@
 		  .attr("d", arc)
 		  .style("fill", function(d) {
 			if (d.parent == null) {
-			  return "#00"
+			  return "rgba(255, 255, 255, 0.8)"
 			}
 			return myColors[allItems.indexOf(d.name)];
 		  })
